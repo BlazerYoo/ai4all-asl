@@ -1,5 +1,6 @@
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
+const label = document.getElementById('label');
 const captureButton = document.getElementById('captureButton');
 const saveButton = document.getElementById('saveButton');
 const capturedImagesContainer = document.getElementById('capturedImages');
@@ -28,7 +29,7 @@ captureButton.addEventListener('mousedown', () => {
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
         const dataUrl = canvas.toDataURL('image/png');
         const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
-        const filename = `capture-${timestamp}.png`;
+        const filename = `${label.value}-${timestamp}.png`;
 
         // Add to list of images
         images.push({ dataUrl, filename });
