@@ -1,6 +1,7 @@
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const label = document.getElementById('label');
+const captureSpeed = document.getElementById('captureSpeed');
 const captureButton = document.getElementById('captureButton');
 const saveButton = document.getElementById('saveButton');
 const capturedImagesContainer = document.getElementById('capturedImages');
@@ -40,7 +41,7 @@ captureButton.addEventListener('mousedown', () => {
         imgElement.style.width = '100px';
         imgElement.style.marginRight = '10px';
         capturedImagesContainer.appendChild(imgElement);
-    }, 100); // Capture every 100ms (adjust as needed)
+    }, captureSpeed.value); // Capture every 100ms (adjust as needed)
 });
 
 // Stop capturing images when the button is released
