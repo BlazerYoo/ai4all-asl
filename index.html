@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI4ALL ASL Project</title>
+</head>
+
+<body>
+  <a id="handPoseLink">Hand pose detection</a>
+  <hr>
+  <a id="datasetGenLink">Image dataset colletion</a>
+</body>
+
+<script>
+  const handPoseLink = document.getElementById('handPoseLink');
+  handPoseLink.href = window.location.href + 'hand-pose-detection/index.html?model=mediapipe_hands';
+  const datasetGenLink = document.getElementById('datasetGenLink');
+  datasetGenLink.href = window.location.href + 'dataset-collection/index.html';
+</script>
+
+</html>
