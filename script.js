@@ -25,7 +25,7 @@ captureButton.addEventListener('mousedown', () => {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
 
-    // Start capturing frames every 100ms (adjust as needed)
+    // Start capturing frames every Xms
     captureInterval = setInterval(() => {
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
         const dataUrl = canvas.toDataURL('image/png');
@@ -41,7 +41,7 @@ captureButton.addEventListener('mousedown', () => {
         imgElement.style.width = '100px';
         imgElement.style.marginRight = '10px';
         capturedImagesContainer.appendChild(imgElement);
-    }, captureSpeed.value); // Capture every 100ms (adjust as needed)
+    }, captureSpeed.value); // Capture every Xms
 });
 
 // Stop capturing images when the button is released
