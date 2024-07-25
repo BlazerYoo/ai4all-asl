@@ -66,7 +66,7 @@ saveButton.addEventListener('click', () => {
         .then(content => {
             const link = document.createElement('a');
             link.href = URL.createObjectURL(content);
-            link.download = 'captures.zip';
+            link.download = `${label.value}.zip`;
             link.click();
         })
         .catch(err => {
