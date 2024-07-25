@@ -2,6 +2,7 @@ const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const label = document.getElementById('label');
 const captureSpeed = document.getElementById('captureSpeed');
+const letterImage = document.getElementById('letterImage');
 const captureButton = document.getElementById('captureButton');
 const saveButton = document.getElementById('saveButton');
 const capturedImagesContainer = document.getElementById('capturedImages');
@@ -9,6 +10,16 @@ const context = canvas.getContext('2d');
 const images = [];
 
 let captureInterval;
+
+// Show hand sign
+label.addEventListener('change', (event) => {
+    const selectedValue = event.target.value;
+    if (selectedValue !== '-') {
+        letterImage.src = `assets/${selectedValue}.jpeg`;
+    } else {
+        letterImage.src = '';
+    }
+});
 
 // Request access to the webcam
 navigator.mediaDevices.getUserMedia({ video: true })

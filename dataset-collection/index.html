@@ -13,8 +13,9 @@
   <video id="video" autoplay></video>
   <canvas id="canvas" style="display: none;"></canvas>
 
-  <label>Choose label:</label>
+  <label>Choose letter:</label>
   <select id="label">
+    <option value="-">-</option>
     <option value="a">a</option>
     <option value="b">b</option>
     <option value="c">c</option>
@@ -45,6 +46,8 @@
 
   <label>Choose photo capture interval:</label>
   <input id="captureSpeed" type="range" min="1" max="1000" value="500">
+
+  <img id="letterImage" width="100">
 
   <button id="captureButton">Capture Image</button>
   <button id="saveButton">Save All Images</button>
