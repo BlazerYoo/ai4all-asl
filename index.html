@@ -11,18 +11,18 @@
 <body>
   <a id="demoLink">Demo</a>
   <hr>
-  <a id="handPoseLink">Hand pose detection</a>
+  <a id="datasetGenLink">Image classifcation dataset collection</a>
   <hr>
-  <a id="datasetGenLink">Image dataset colletion</a>
+  <a id="handPoseLink">Hand pose dataset collection</a>
 </body>
 
 <script>
-  const handPoseLink = document.getElementById('handPoseLink');
-  handPoseLink.href = window.location.href + 'hand-pose-detection/index.html?model=mediapipe_hands';
-  const datasetGenLink = document.getElementById('datasetGenLink');
-  datasetGenLink.href = window.location.href + 'dataset-collection/index.html';
   const demoLink = document.getElementById('demoLink');
   demoLink.href = window.location.href + 'demo/index.html';
+  const datasetGenLink = document.getElementById('datasetGenLink');
+  datasetGenLink.href = window.location.href + 'image-collection/index.html';
+  const handPoseLink = document.getElementById('handPoseLink');
+  handPoseLink.href = window.location.href + 'hand-pose-collection/index.html?model=mediapipe_hands';
 </script>
 
 </html>
