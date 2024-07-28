@@ -1,7 +1,7 @@
 const captureSpeed = document.getElementById('captureSpeed');
 const letterImage = document.getElementById('letterImage');
 const captureButton = document.getElementById('captureButton');
-const saveButton = document.getElementById('saveButton');
+//const saveButton = document.getElementById('saveButton');
 
 let captureInterval;
 let handsKeypoints;
