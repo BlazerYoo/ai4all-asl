@@ -19,7 +19,19 @@ label.addEventListener('change', (event) => {
 // Collect poses
 captureButton.addEventListener('mousedown', () => {
   captureInterval = setInterval(() => {
-    console.log(handsKeypoints);
+    if (handsKeypoints.length !== 0) {
+
+      const handsKeypoints2D = handsKeypoints[0].keypoints;
+      console.log(handsKeypoints2D);
+
+      // Convert to array
+      const keypointsArr = new Array();
+      handsKeypoints2D.map((coord) => {
+        keypointsArr.push(coord.x);
+        keypointsArr.push(coord.y);
+      });
+      console.log(keypointsArr);
+    }
     //console.log(`x: ${handsKeypoints[0].keypoints3D.map((kp) => kp.x)}`);
     //console.log(`y: ${handsKeypoints[0].keypoints3D.map((kp) => kp.y)}`);
     //console.log(`z: ${handsKeypoints[0].keypoints3D.map((kp) => kp.z)}`);
