@@ -32,27 +32,31 @@ navigator.mediaDevices.getUserMedia({ video: true })
 
 // Start capturing images while button is held down
 captureButton.addEventListener('mousedown', () => {
-    // Set canvas dimensions to match video
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
+    if (label.value !== '-') {
+        // Set canvas dimensions to match video
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
 
-    // Start capturing frames every Xms
-    captureInterval = setInterval(() => {
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        const dataUrl = canvas.toDataURL('image/png');
-        const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
-        const filename = `${label.value}-${timestamp}.png`;
+        // Start capturing frames every Xms
+        captureInterval = setInterval(() => {
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const dataUrl = canvas.toDataURL('image/png');
+            const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
+            const filename = `${label.value}-${timestamp}.png`;
 
-        // Add to list of images
-        images.push({ dataUrl, filename });
+            // Add to list of images
+            images.push({ dataUrl, filename });
 
-        // Display captured images
-        const imgElement = document.createElement('img');
-        imgElement.src = dataUrl;
-        imgElement.style.width = '100px';
-        imgElement.style.marginRight = '10px';
-        capturedImagesContainer.appendChild(imgElement);
-    }, captureSpeed.value); // Capture every Xms
+            // Display captured images
+            const imgElement = document.createElement('img');
+            imgElement.src = dataUrl;
+            imgElement.style.width = '100px';
+            imgElement.style.marginRight = '10px';
+            capturedImagesContainer.appendChild(imgElement);
+        }, captureSpeed.value); // Capture every Xms
+    } else {
+        alert('Please select your letter/label first.');
+    }
 });
 
 // Stop capturing images when the button is released

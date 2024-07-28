@@ -13,6 +13,8 @@
   <video id="video" autoplay></video>
   <canvas id="canvas" style="display: none;"></canvas>
 
+  <p>If you made a mistake, just reload the page.</p>
+
   <label>Choose letter:</label>
   <select id="label">
     <option value="-">-</option>
@@ -44,7 +46,10 @@
     <option value="z">z</option>
   </select>
 
-  <label>Choose photo capture interval:</label>
+  <label>
+    Choose photo capture interval
+    (the smaller the blue bar, the less time there is in between each photo captured):
+  </label>
   <input id="captureSpeed" type="range" min="1" max="1000" value="500">
 
   <img id="letterImage" width="100">
