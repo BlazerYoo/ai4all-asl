@@ -1,0 +1,3 @@
+[submodule "SignMan"]
+	path = SignMan
+	url = https://github.com/BlazerYoo/SignMan
