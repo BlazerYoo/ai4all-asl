@@ -1,3 +1,7 @@
+// Load trained model
+const sess = new onnx.InferenceSession();
+const loadingModelPromise = sess.loadModel('onnx_model.onnx');
+
 const captureSpeed = document.getElementById('captureSpeed');
 const letterImage = document.getElementById('letterImage');
 const captureButton = document.getElementById('captureButton');
