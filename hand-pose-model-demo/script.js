@@ -56,8 +56,8 @@ function get_letter(index) {
   return mapping[index];
 }
 
-async function updatePredictions() {
-  const input = new onnx.Tensor(new Float32Array(imgData.data), "float32", [1, 42]);
+async function updatePredictions(keypointsArr) {
+  const input = new onnx.Tensor(new Float32Array(keypointsArr), "float32", [1, 42]);
 
   const outputMap = await sess.run([input]);
   const outputTensor = outputMap.values().next().value;
