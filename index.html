@@ -14,6 +14,9 @@
   <a id="datasetGenLink">Image classifcation dataset collection</a>
   <hr>
   <a id="handPoseLink">Hand pose demo</a>
+  <br><br>
+  <hr>
+  <a id="handPoseModelLink">Hand pose trained model demo</a>
 </body>
 
 <script>
@@ -23,6 +26,8 @@
   datasetGenLink.href = window.location.href + 'image-collection/index.html';
   const handPoseLink = document.getElementById('handPoseLink');
   handPoseLink.href = window.location.href + 'hand-pose-demo/index.html?model=mediapipe_hands';
+  const handPoseModelLink = document.getElementById('handPoseModelLink');
+    handPoseModelLink.href = window.location.href + 'hand-pose-model-demo/index.html?model=mediapipe_hands';
 </script>
 
 </html>
