@@ -1,3 +1,6 @@
 [submodule "SignMan"]
 	path = SignMan
 	url = https://github.com/BlazerYoo/SignMan
+[submodule "ASLZoom"]
+	path = ASLZoom
+	url = https://github.com/BlazerYoo/ASLZoom
