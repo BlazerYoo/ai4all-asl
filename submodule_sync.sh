@@ -1,4 +1,4 @@
-cd SignMan
+cd ASLZoom
 echo ------------------------------------------------------------------
 git fetch
 echo ------------------------------------------------------------------
@@ -10,8 +10,8 @@ cd ..
 echo ------------------------------------------------------------------
 git status
 echo ------------------------------------------------------------------
-git add SignMan
+git add ASLZoom
 echo ------------------------------------------------------------------
-git commit -m "Update SignMan submodule to the latest commit"
+git commit -m "Update ASLZoom submodule to the latest commit"
 echo ------------------------------------------------------------------
 git push
