@@ -1,9 +1,9 @@
-git submodule add https://github.com/BlazerYoo/SignMan SignMan
+git submodule add https://github.com/BlazerYoo/ASLZoom ASLZoom
 echo ------------------------------------------------------------------
 git status
 echo ------------------------------------------------------------------
-git add .gitmodules path/to/desired/sub-repo
+git add .gitmodules ASLZoom
 echo ------------------------------------------------------------------
-git commit -m "add signman as submodule"
+git commit -m "add aslzoom as submodule"
 echo ------------------------------------------------------------------
 git push
